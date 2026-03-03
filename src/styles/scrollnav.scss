@@ -1,23 +1,41 @@
 .scroll-nav {
   position: fixed;
-  right: 40px;
+  right: 10px; /* 🔥 영역 넓히기 위해 끝까지 붙임 */
   top: 50%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   gap: 15px;
-  z-index: 100;
+  z-index: 1000;
 
-  .dot {
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: #000;
-    transition: 0.3s;
+  padding: 40px 20px; /* 🔥 마우스 감지 범위 넓힘 */
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
 
-    &.active {
-      background: #000;
-      transform: scale(3);
-    }
-  }
+/* 🔥 오른쪽 영역에 마우스 오면 전체 등장 */
+.scroll-nav:hover {
+  opacity: 1;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #111111;
+  cursor: pointer;
+
+  transition: 
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+/* hover 시 커짐 */
+.dot:hover {
+  transform: scale(2);
+}
+
+/* active는 항상 좀 더 크게 */
+.dot.active {
+  transform: scale(3);
 }

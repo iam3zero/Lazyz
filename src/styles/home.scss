@@ -1,6 +1,10 @@
+.sections {
+  height: 100%;
+}
 .section {
   height: 100vh;
   width: 100%;
+  
 }
 
 .section2 {
@@ -10,11 +14,14 @@
 }
 
 .section3 {
-  background: #ddd;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/img/pc_2.jpg");
 }
 
 .section4 {
-  background: #bbb;
+  min-height: 100vh;
+  background: #fff;
 }
 
 .section5 {

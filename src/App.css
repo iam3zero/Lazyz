@@ -1,0 +1,11 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; 
+}
+.page-wrapper {
+  transition: transform 0.9s cubic-bezier(0.65, 0, 0.35, 1);
+  will-change: transform;
+}
+

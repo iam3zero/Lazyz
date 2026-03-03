@@ -7,15 +7,6 @@ html, body {
   overflow: hidden;
 }
 
-/* .page-wrapper {
-  position: fixed;   // 🔥 이거 추가
-  top: 0;
-  left: 0;
-  width: 100%;
-  transition: transform 0.8s ease;
-  z-index: 1;
-} */
-
 .page-wrapper {
   position: fixed;
   top: 0;
@@ -23,10 +14,12 @@ html, body {
   width: 100%;
   height: 100vh;        // 🔥 이거 추가
   overflow: hidden;     // 🔥 이거 추가
+}
+.sections {
   transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.section,
+/* .section,
 .hero {
   height: 100vh;
-}
+} */

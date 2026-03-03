@@ -1,1 +1,1 @@
-.section{height:100vh;width:100%}.section2{background-image:url("/img/pc_4.jpg");background-size:cover;background-position:center}.section3{background:#ddd}.section4{background:#bbb}.section5{background:#999}
+.sections{height:100%}.section{height:100vh;width:100%}.section2{background-image:url("/img/pc_4.jpg");background-size:cover;background-position:center}.section3{background-size:cover;background-position:center;background-image:url("/img/pc_2.jpg")}.section4{min-height:100vh;background:#fff}.section5{background:#999}

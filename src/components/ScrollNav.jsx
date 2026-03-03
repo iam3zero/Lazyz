@@ -1,31 +1,18 @@
-import { useEffect, useState } from "react";
 import "../styles/scrollnav.scss";
 
-function ScrollNav() {
-  const [active, setActive] = useState(0);
+function ScrollNav({ current, setSection }) {
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll(".section");
-
-      sections.forEach((section, index) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-          setActive(index);
-        }
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const handleClick = (index) => {
+    setSection(index);
+  };
 
   return (
     <div className="scroll-nav">
-      {[0, 1, 2, 3, 4].map((item, index) => (
+      {[0, 1, 2, 3, 4].map((_, index) => (
         <div
           key={index}
-          className={`dot ${active === index ? "active" : ""}`}
+          className={`dot ${current === index ? "active" : ""}`}
+          onClick={() => handleClick(index)}
         />
       ))}
     </div>

@@ -1,0 +1,195 @@
+@use "./variables" as *;
+
+.header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  height: 100vh; // 전체 화면 기준 배치
+  pointer-events: none; // 레이아웃만 고정
+
+  .side-nav,
+  .logo,
+  .user-menu {
+    pointer-events: auto;
+  }
+
+  /* 왼쪽 세로 메뉴 */
+  .side-nav {
+  left: 2.5%;
+  top: 118px;
+  position: fixed;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    li {
+      .menu-title {
+        cursor: pointer;
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: #fff;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: #888;
+        }
+      }
+
+      .sub-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-left: 5px;
+        max-height: 0;          // 🔥 닫힌 상태
+        overflow: hidden;       // 🔥 넘치는 거 숨김
+        transition: all 0.8s ease;
+        
+        li {
+          font-size: 13px;
+          color: #fff;
+          cursor: pointer;
+          transition: all 0.5s ease;
+          line-height: 18px;
+          padding: 0;
+          
+
+          &:hover {
+            color: #888;
+          }
+        }
+
+        &.open {
+          max-height: 300px;   // 🔥 충분히 큰 값
+          margin: 15px 0 20px;
+        }
+      }
+    }
+  }
+}
+
+  /* 중앙 로고 */
+  .logo {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: auto;
+
+    img {
+      width: 120px;
+    }
+  }
+
+  /* 오른쪽 상단 메뉴 */
+  .user-menu {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+    pointer-events: auto;
+    color: #fff;
+    font-size: 11px;
+
+    div {
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+      color: #888;
+    }
+  }
+    .mypage {
+      position: relative;
+      cursor: pointer;
+  }
+    .mypage:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      
+      transition-delay: 0.2s; 
+      /* hover 후 0.2초 있다가 서서히 나타남 */
+}
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: -13px;
+      z-index: 10000;
+
+      min-width: 130px;
+      padding: 10px 5px 5px;
+      list-style: none;
+      background: url(/img/bg.png);
+
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+
+      transition: 
+        opacity 0.8s,
+        visibility 0s linear 0.8s; 
+      /* 사라질 때 0.8초 후 visibility 숨김 */
+    }
+    }
+    .dropdown-menu li a {
+    color: #111;
+    padding: 0 3px;
+    line-height: 22px;
+    font-size: 10px;
+    margin: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &:hover{
+      color: #888;
+    }
+}
+
+    .img_ball{
+      position: absolute;
+      margin-left: 3px;
+      top: -22px;
+      animation: floatBall 2s ease-in-out infinite;
+
+      @keyframes floatBall {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-3px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+    }
+    .img_ball img{
+      width: 44px;
+      height: 25px;
+    }
+    .cart-icon img{
+      width: 14px;
+      height: 14px;
+      max-width: 100%;
+      vertical-align: top;
+    }
+    .search-icon img{
+      width: 14px;
+      height: 14px;
+      max-width: 100%;
+      vertical-align: top;
+      margin-top: 2px;
+    }
+    .global-icon img{
+      width: 19px;
+      height: 14px;
+      margin-top: 1px;
+      margin-right: 8px;
+    }
+  }

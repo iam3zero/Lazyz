@@ -4,10 +4,14 @@
   justify-content: center;
 }
 
+
 .section4-inner {
-  width: 100%;
+  /* width: 100%;
   padding: 80px 0;
+  text-align: center; */
+  margin: 0 auto;
   text-align: center;
+  margin-top: 80px;
 }
 
 .insta-title img {
@@ -26,6 +30,7 @@
   margin: 0 auto;
   margin-top: 10px;
   padding: 2px;
+  margin-bottom: 90px; // 👈 footer랑 간격
 }
 
 .insta-item {

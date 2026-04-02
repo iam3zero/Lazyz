@@ -20,22 +20,24 @@ function App() {
 
   useEffect(() => {
     const handleWheel = (e) => {
-      if (isScrolling.current) return;
+    if (section === 3) return; // 🔥 section4에서는 일반 스크롤 허용
 
-      if (Math.abs(e.deltaY) < 30) return; // 작은 움직임 무시
+    if (isScrolling.current) return;
 
-      isScrolling.current = true;
+    if (Math.abs(e.deltaY) < 30) return;
 
-      if (e.deltaY > 0) {
-        setSection((prev) => (prev < totalSections - 1 ? prev + 1 : prev));
-      } else {
-        setSection((prev) => (prev > 0 ? prev - 1 : prev));
-      }
+    isScrolling.current = true;
 
-      setTimeout(() => {
-        isScrolling.current = false;
-      }, 800);
-    };
+    if (e.deltaY > 0) {
+      setSection((prev) => (prev < totalSections - 1 ? prev + 1 : prev));
+    } else {
+      setSection((prev) => (prev > 0 ? prev - 1 : prev));
+    }
+
+    setTimeout(() => {
+      isScrolling.current = false;
+    }, 800);
+  };
 
 
     window.addEventListener("wheel", handleWheel);

@@ -1,6 +1,7 @@
 import Hero from "../components/Hero";
 import "../styles/home.scss";
 import Section4 from "../components/Section4";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -13,8 +14,8 @@ function Home() {
       <section className="section section3"></section>
       <section className="section section4">
         <Section4 />
-        </section>
-      <section className="section section5"></section>
+        <Footer />
+      </section>
     </div>
   );
 }

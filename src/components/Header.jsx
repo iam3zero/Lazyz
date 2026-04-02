@@ -61,12 +61,12 @@ function Header() {
 
       {/* 중앙 로고 */}
       <div className="logo">
-        <img src="/img/logo_white.png" alt="LAZYZ LOGO" />
+        <img src="./public/img/logo_white.png" alt="LAZYZ LOGO" />
       </div>
 
       {/* 오른쪽 상단 */}
       <div className="user-menu">
-        <div className="img_ball"><img src="/img/point.png" alt="img ball" /></div>
+        <div className="img_ball"><img src="./public/img/point.png" alt="img ball" /></div>
         <div>JOIN US</div>
         <div>LOGIN</div>
         <div className="mypage"><span>MY PAGE</span>
@@ -78,12 +78,12 @@ function Header() {
                 <li><a href="/">address</a></li>
             </ul>
         </div>
-        <div className="cart-icon"><img src="/img/icon_bag_white.png" alt="CART ICON" /> (0)</div>
-        <div className="search-icon"><img src="/img/icon_search_white.png" alt="search ICON" /></div>
+        <div className="cart-icon"><img src="./public/img/icon_bag_white.png" alt="CART ICON" /> (0)</div>
+        <div className="search-icon"><img src="./public/img/icon_search_white.png" alt="search ICON" /></div>
         <div className="global-icon">
-            <img src="/img/KR_32x24.png" alt="KR ICON" />
-            <img src="/img/US_32x24.png" alt="US ICON" />
-            <img src="/img/JP_32x24.png" alt="JP ICON" />
+            <img src="./public/img/KR_32x24.png" alt="KR ICON" />
+            <img src="./public/img/US_32x24.png" alt="US ICON" />
+            <img src="./public/img/JP_32x24.png" alt="JP ICON" />
             </div>
       </div>
     </header>

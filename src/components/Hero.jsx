@@ -2,11 +2,11 @@ import { useEffect, useState, useRef } from "react";
 import "../styles/hero.scss";
 
 const images = [
-  "/img/pc_1.jpg",
-  "/img/pc_2.jpg",
-  "/img/pc_3.jpg",
-  "/img/pc_4.jpg",
-  "/img/pc_5.jpg",
+  "./public/img/pc_1.jpg",
+  "./public/img/pc_2.jpg",
+  "./public/img/pc_3.jpg",
+  "./public/img/pc_4.jpg",
+  "./public/img/pc_5.jpg",
 ];
 
 function Hero() {
